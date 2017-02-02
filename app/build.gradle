@@ -13,7 +13,8 @@ android {
 
         externalNativeBuild {
             cmake {
-                cppFlags "-fexceptions"
+                arguments "-DANDROID_TOOLCHAIN=gcc"
+                cppFlags "-std=c++11 -frtti -fexceptions"
             }
         }
     }
